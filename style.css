@@ -1,248 +1,316 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    color: #333333;
+font-family: 'Inter', sans-serif;
+color: #333333;
+background-color: white;
 }
 
-a {
-    text-decoration: none;
+img {
+    display: block;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-
-    margin: 0 auto;
-}
-
-/* Не забудьте еще сюда footer вписать */
-.header, .main {
+/* ===== Шапка ===== */
+.header {
     width: 100%;
 }
 
 .nav {
     width: 100%;
-    height: 60px;
-    
+    height: 60px; 
+
+    background-color: white;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
-    padding: 0px 12px;
+    padding: 0 12px;
 }
 
-.logo {
+.nav .logo {
     font-weight: 400;
     font-size: 12px;
-    text-transform: uppercase;
+    color: #333333;
+    text-decoration: none;
+    letter-spacing: 0.2em; /* в Figma 20% = 0.2em */
+}
+.nav a{
+    text-decoration: none;
 }
 
-.navbar {
+.nav .navbar {
     display: flex;
     gap: 26px;
+}
 
+.nav .navbar li{
     list-style-type: none;
 }
 
-.navbar a {
+.nav .navbar li a{
     font-weight: 400;
     font-size: 12px;
-
-    transition: all .3s ease;
+    color: #333333;
+    transition: all 0.3s ease;
+}
+.nav .navbar li a:hover{
+    color: yellowgreen;
 }
 
-.navbar a:hover  {
-    color: #7ace14;
-
-    transition: all .3s ease;
-}
-
-.title {
-    font-weight: 600;
-    font-family: 'Semi Bold', sans-serif;
-    font-size: 92px;
-    line-height: 100px;
-    letter-spacing: 10%;
-    text-transform: uppercase;
-}
-
-.helper-block, .vision-block {
+/* Все классы */
+.container{
     width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+.mt-130{
+    margin-top: 130px;
+}
 
+/* Все ссылки узнать больше */
+.link {
+    font-weight: 500;
+    font-size: 18px;
+    color: #333333;
+    text-decoration: none;
+}
+
+/* Подчеркнутые ссылки */
+.underline-link {
+    font-weight: 500;
+    font-size: 18px;
+    color: #333333;
+}
+
+/* Первая картинка */
+.title{
+    font-weight: 600;
+    font-size: 92px;
+    line-height: normal;
+    letter-spacing: 0.1em;
+    color: #333333;
+}
+
+.help-block{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin-top: 41px;
 }
-
-.info-block, .vision-info-block {
+.text-block{
     width: 480px;
+    margin-top: 173px;
+    text-align: right;
 }
-
-.info-block .title {
+.text-block h2 {
     font-weight: 500;
     font-size: 38px;
-
-    text-transform: none;
-
-    text-align: right;
+    line-height: 39px;
 }
-
-.info-block .info-text, .info-block .link {
+.text-block p {
+    margin-top: 52px;
     font-weight: 500;
-    font-family: 'Medium', sans-serif;
     font-size: 18px;
-
-    text-align: right;
-}
-
-.info-block .info-text, .vision-info-block .info-text {
-    font-family: 'Inter', sans-serif;
-
     line-height: 26px;
 }
-
-.info-block .link {
-    display: block;
-
-    text-align: right;
+.text-block .link {
+    display: inline-block;
+    margin-top: 40px;
 }
-
-.image-block, .vision-image-block {
-    width: 585px;
+.image-block{
+    width: 581px;
 }
-
 .image-block img {
     width: 100%;
-
+    height: 504px;
     object-fit: cover;
 }
-
-.image-block .description {
+.image-block p {
+    width: 567px;
+    margin-top: 16px;
     font-weight: 500;
-    font-style: 'Medium';
     font-size: 18px;
     line-height: 26px;
-
-    margin-top: 16px;
 }
 
-.vision-info-block .title {
+/* Вторая картинка */
+.vision {
+    display: flex;
+    margin-top: 205px;
+}
+.vision-image {
+    width: 583px;
+    height: 916px;
+    object-fit: cover;
+}
+.vision-text {
+    width: 424px;
+    margin-left: 117px;
+    margin-top: 62px;
+}
+.vision-text h2 {
     font-weight: 500;
-    font-style: 'Medium';
     font-size: 38px;
-    line-height: 50px;
-
-    
-    text-transform: none;
+    line-height: 46px;
+}
+.vision-text p {
+    margin-top: 54px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+}
+.vision-text .link {
+    display: inline-block;
+    margin-top: 32px;
 }
 
-.vision-info-block .title, .vision-info-block .info-text {
-    text-align: left;
-}
-
-.recent-block {
-    width: 100%;
-
+/* Две картинки далее */
+.section-head {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: flex-end;
 }
-
-.recent-block .title {
+.section-title {
     font-weight: 600;
-    font-style: 'Semi Bold';
     font-size: 64px;
     line-height: 72px;
 }
-
-.recent-block .link {
-    font-weight: 500;
-    font-style: 'Medium';
-    font-size: 18px;
+.grey {
+    color: #acacac;
 }
 
-.cards-block {
-    width: 100%;
-
+/* Следующие две картинки */
+.rebrands {
+    margin-top: 201px;
+}
+.rebrands .underline-link {
+    margin-bottom: 8px;
+}
+.cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
+    margin-top: 35px;
 }
-
-.card {
-    width: 490px;
+.card-wide {
+    width: 684px;
 }
-
-.card-image {
+.card-narrow {
+    width: 484px;
+}
+.card img {
     width: 100%;
+    height: 592px;
+    object-fit: cover;
 }
-
-.card-image img {
-    width: 100%;
-    height: 590px;
-}
-
-.card-desc {
-    width: 100%;
-
+.card-info {
     display: flex;
-    justify-content: space-between;
-    align-items: start;
-
+    justify-content: space-between; 
     margin-top: 20px;
 }
-
-.card-desc .title, 
-.card-desc .subtitle,
-.card-desc .tag {
+.card-info div p + p {
+    margin-top: 10px;
+}
+.card-title {
     font-weight: 500;
-    font-style: 'Medium';
     font-size: 24px;
     line-height: 26px;
 }
 
-.card-desc .title {
-    margin-bottom: 15px;
+/* Последний блок */
+.articles {
+    margin-top: 174px;
+}
+.articles .section-head {
+    align-items: flex-start;
+}
+.articles .section-title {
+    margin-top: 28px;
+}
+.articles-about {
+    text-align: right;
+}
+.articles-about p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+}
+.articles-about .underline-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: black;
+}
+.articles-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 63px;
+}
+.article {
+    width: 384px;
+}
+.article img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+}
+.article .card-title {
+    margin-top: 20px;
 }
 
-
-
-
-
-
-
-
-/* Глобальный класс для большой карточки, 
-без него все карточки будут маленькими */
-
-.xl {
-    width: 690px;
+/* Почта */
+.footer {
+    margin-top: 160px;
+    height: 394px;
+    background-color: #333333;
 }
-
-
-
-
-
-/* Здесь описаны наши отступы для контейнеров */
-
-.mb-55 {
-    margin-bottom: 55px;
+.footer-inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.mt-45 {
-    margin-top: 45px;
+.footer-logo {
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 124px;
+    color: white;
+    text-decoration: none;
 }
-
-.mt-130 {
-    margin-top: 130px;
+.subscribe {
+    width: 353px;
 }
-
-.mt-205 {
-    margin-top: 205px;
+.subscribe-text {
+    font-size: 18px;
+    line-height: 26px;
+    color: white;
+}
+.subscribe-input {
+    width: 100%;
+    height: 40px;
+    margin-top: 18px;
+    padding: 0 12px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: white;
+    outline: none;
+}
+.subscribe-input::placeholder {
+    color: #acacac;
+}
+.subscribe-note {
+    width: 272px;
+    margin-top: 39px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #979797;
+}
+.subscribe-note a {
+    color: #979797;
 }
